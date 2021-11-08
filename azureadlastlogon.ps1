@@ -4,7 +4,7 @@
 #it sleeps 10 seconds inbetween requests, to avoid additional throttling
 #this beta query that includes signInActivity does not support filtering. If you try and filter the total user scope, it will fail to give a NextLink that functions.
 #because depending on the number of users (10's of thousands or more) it could take longer than 1 hour, every 50 queries it generates a fresh access token as they are only valid for 1 hour.
-
+#at the end, rather than exporting all the data to a CSV it will only export data where there IS data in the signonactivity value returned. This data can then be compared against licensed user lists for example.
 
 #get access token
 accesstoken
